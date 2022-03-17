@@ -9,7 +9,7 @@
 <?php
 echo "<h2> Exercicio Array </h2>";
 
-$disciplinas = array("3daw");
+$disciplinas = array("3daw","3alg","3rsd");
 var_dump($disciplinas);
 
 echo $disciplinas [0];
