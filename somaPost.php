@@ -1,6 +1,7 @@
 <?php
 $v1= "";
 $v2="";
+$result="";
 if($_SERVER ["REQUEST_METHOD"]=="POST"){
 $v1 = $_POST["valor1"];
 $v2 = $_POST["valor2"];
