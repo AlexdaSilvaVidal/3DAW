@@ -1,8 +1,6 @@
 <?php
  function validaMat(){
-  while (!feof($arquivoAlunoin)){
-	 echo fgets ($aquivoAluno);
-    }
+  
  }
 
  if($_SERVER ["REQUEST_METHOD"] == "POST"){
@@ -14,8 +12,8 @@
    while (!feof($arquivoAlunoin)){
 	 echo fgets ($aquivoAluno);
    }
+   $arquivoAluno = fopen ("Alunos.txt", "w") or die ("arquivo com problema"); 
    $cabecalho = "matricula;nome;email \n";
-   $arquivoAlunow = fopen ("Alunos.txt", "w") or die ("arquivo com problema"); 
    fwrite ($arquivoAlunow, $cabecalho);
    $linha = $matricula . ";" . $nome . ";" . $email;
    fwrite ($arquivoAlunow, $linha);
