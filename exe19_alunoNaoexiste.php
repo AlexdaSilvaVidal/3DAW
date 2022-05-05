@@ -9,10 +9,10 @@
    $email = $_POST ["email"];
  
 	
-    if file_exists("Aluno.txt"){
-	 cabecalho = "matricula;nome;email \n";
+    if (file_exists("Aluno.txt")){
+     $cabecalho = "matricula;nome;email \n";
      $arquivoAlunow = fopen ("Alunos.txt", "w") or die ("arquivo com problema"); 
-	 fwrite ($arquivoAlunow, $linha);
+     fwrite ($arquivoAlunow, $linha);
      fclose($arquivoAlunow);
     }
   
