@@ -1,8 +1,6 @@
 <?php
  function validaMat(){
-  while (!feof($arquivoAlunoin)){
-	 echo fgets ($aquivoAluno);
-    }
+  
  }
 
  if($_SERVER ["REQUEST_METHOD"] == "POST"){
