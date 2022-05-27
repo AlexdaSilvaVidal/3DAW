@@ -10,6 +10,7 @@
   <a href="incluirUsuario.php" class="w3-bar-item w3-button">Incluir Usuário</a>
   <a href="pedirMatricula.html" class="w3-bar-item w3-button">Alterar Usuário</a>
   <a href="listarUsuarios.php" class="w3-bar-item w3-button">Listar Usuários</a>
+  <a href="listarUmUsuario.php" class="w3-bar-item w3-button">Listar Um Usuário</a>
   <a href="excluirUsuario.php" class="w3-bar-item w3-button">Excluir Usuário</a>
 </div>
 
