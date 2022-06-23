@@ -21,14 +21,14 @@
 <body>
 <h1>Incluir Usuario</h1><br><br>
 <div>
-<a href="incluirUsuarioSql.html">Incluir Usuário</a><br>
-<a href="alterarUsuarioSql.html">Alterar Usuário</a><br>
-<a href="excluirUsuarioSql.html">Excluir Usuário</a><br>
-<a href="listarUsuarioSql.html">Listar Usuário</a><br>
-<a href="listarTodosUsuarioSql.html">Listar Todos Usuários</a><br>
+<a href="incluirUsuarioJava.html">Incluir Usuário</a><br>
+<a href="alterarUsuarioJava.html">Alterar Usuário</a><br>
+<a href="excluirUsuarioJava.html">Excluir Usuário</a><br>
+<a href="listarUsuarioJava.html">Listar Usuário</a><br>
+<a href="listarTodosUsuarioJava.html">Listar Todos Usuários</a><br>
 </div>
 
-<form action="incluirUsuarioSql.php" method="POST">
+<form action="incluirUsuarioJava.php" method="POST">
     Matricula: <input type=text name="matricula" id="matricula" value=''> <br>
     nome: <input type=text name="nome" value=''> <br>
     função: <input type=text name="funcao"> <br>
