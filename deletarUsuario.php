@@ -8,7 +8,7 @@ $funcao = "";
 $senha = "";
 $user = 'root';
 $pass = '';
-$conn = new PDO('mysql:host=localhost;dbname=faeterj3DawManha', $user, $pass);
+$conn = new PDO('mysql:host=localhost;dbname=CrudSql', $user, $pass);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$matricula = $_POST["matricula"];
