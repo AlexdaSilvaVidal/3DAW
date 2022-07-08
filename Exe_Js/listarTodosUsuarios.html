@@ -1,0 +1,70 @@
+<html>
+<head>
+<script>
+        function enviaForm() {
+            let mat = document.getElementById("matricula").value;
+            console.log("mat: " + mat);
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                console.log("this.readyState: " + this.readyState);
+                if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+                    document.getElementById("resultado").innerHTML = xhttp.responseText;
+                }
+            };
+            //console.log("this.readyState: " + this.readyState);
+            xhttp.open("GET", "ex26_IncluirUsuario.php", true);
+            xhttp.send();
+        }
+        function buscarUsuario() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                console.log("this.readyState: " + this.readyState);
+                if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+                    console.log("Resposta: " +  xhttp.responseText);
+                    document.getElementById("msg").innerHTML = xhttp.responseText;
+                    let obj = JSON.parse(xhttp.responseText);
+                    for (let x=0;x < obj.length ; x++) {
+                        console.log("obj: " + obj[x].id); 
+                        console.log("obj: " + obj[x].nome); 
+                        console.log("obj: " + obj[x].matricula); 
+
+                    }
+                    // console.log("nome: " +  obj.nome);
+                    // console.log("matricula: " +  obj.matricula);
+                    // console.log("funcao: " +  obj.funcao);
+                    // console.log("senha: " +  obj.senha);
+                    // // xhttp.responseText;
+                    // document.getElementById("mat").value = obj.matricula;
+                    // document.getElementById("matricula").value = obj.matricula;
+                    // document.getElementById("nome").value = obj.nome;
+                    // document.getElementById("funcao").value = obj.funcao;
+                    // document.getElementById("senha").value = obj.senha;
+
+                    // document.getElementById("formAlt").style.display = "block";
+                    // document.getElementById("pedeMat").style.display = "none";
+                }
+            };
+            //console.log("this.readyState: " + this.readyState);
+            xhttp.open("GET", "http://localhost/3daw/ex27_ListarTodosUsuarios.php", false);
+            xhttp.send();
+        }
+    </script>    
+</head>
+<body>
+<h1>Listar Usuario</h1>
+<br>
+<br>
+<div id="formAlt" style="display: none">
+
+<br>
+</div>
+<div id="pedeMat" style>
+    <form>
+        <button id="matBusca" value='Listar' onclick="buscarUsuario();">Listar</button> <br>
+    </form>
+</div>
+<div id="msg"></div>
+</body>
+</html>
